@@ -8,6 +8,10 @@ html {
     background-color: var(--primary);
 }
 
+button {
+    border-radius: 1em;
+}
+
 /* Neumorphism Saved Buttons */
 
 /* Regular Box
