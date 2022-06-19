@@ -1,11 +1,17 @@
 /* Global Variables */
 :root{
     --primary: #26282b;
+    --secondary: #e6e6e6;
     
 }
 
 html {
     background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.button-group {
+    display: grid;
 }
 
 button {
