@@ -10,6 +10,12 @@ html {
     color: var(--secondary);
 }
 
+.wrapper {
+    display: grid;
+    justify-content: center;
+    margin-top: 10em;
+}
+
 .button-group {
     display: grid;
 }

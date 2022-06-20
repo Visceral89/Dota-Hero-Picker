@@ -12,13 +12,19 @@
         <div class="title"><h1>what hero should you play today?</h1></div>
 
         <div class="portrait"><img src="images/abaddon.png" alt="Your Hero" class="hero-portrait"></div>
+        <div class="hero-desc">Short Hero description</div>
+        
+        <div class="reroll">
+            <button class="button" onclick="yes" id="yes"></button>
+            <button class="button" onclick="reroll" id="reroll"></button>
+        </div>
 
-        <div class="button-group">
-            <button type="button">Carry</button>
-            <button type="button">Mid</button>
-            <button type="button">Offlane</button>
-            <button type="button">Support</button>
-            <button type="button">Hard Support</button>
+        <div class="attribute-group">
+            <button onclick="carry">Carry</button>
+            <button onclick="mid">Mid</button>
+            <button onclick="offlane">Offlane</button>
+            <button onclick="support">Support</button>
+            <button onclick="hardsupport">Hard Support</button>
         </div>
     </div>
     <!-- End of wrapper -->
