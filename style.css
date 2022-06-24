@@ -1,6 +1,6 @@
 /* Global Variables */
 :root{
-    --primary: #26282b;
+    --primary: #d6d6d6;
     --secondary: #e6e6e6;
     
 }
@@ -12,8 +12,22 @@ html {
 
 .wrapper {
     display: grid;
+    justify-items: center;
+    align-items: center;
     justify-content: center;
-    margin-top: 10em;
+    margin-top: 10%;
+    padding: 2em;
+}
+
+.reroll {
+    margin: 2em;
+}
+
+.hero-desc {
+    background-color: var(--primary);
+    width: 50%;
+    margin-top: 1em;
+    padding: 2em;
 }
 
 .button-group {
@@ -21,8 +35,22 @@ html {
 }
 
 button {
-    border-radius: 1em;
+    border: none;
+    height: 5em;
+    width: 7em;
+    border-radius: 16px;
+    background: #d6d6d6;
+    box-shadow:  9px 9px 18px #b6b6b6,
+                 -9px -9px 18px #f6f6f6;
 }
+
+button:hover {
+    border-radius: 16px;
+    background: #d6d6d6;
+    box-shadow: inset 9px 9px 18px #b6b6b6,
+                inset -9px -9px 18px #f6f6f6;
+}
+
 
 /* Neumorphism Saved Buttons */
 
