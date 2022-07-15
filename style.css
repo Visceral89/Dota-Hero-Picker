@@ -25,16 +25,26 @@ html {
 
 .hero-desc {
     background-color: var(--primary);
-    width: 50%;
+    width: 1fr;
     margin-top: 1em;
     padding: 2em;
 }
 
 .button-group {
     display: grid;
+    margin: auto;
+    width: 1fr;
+}
+
+.attribute-group {
+    width: 2fr;
+    margin: auto;
 }
 
 button {
+    height: 4em;
+    width: 6em;
+    margin: 1em;
     border-radius: 16px;
     background: #d6d6d6;
 }
