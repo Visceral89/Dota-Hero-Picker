@@ -8,16 +8,32 @@
 html {
     background-color: var(--primary);
     color: var(--secondary);
+    color: black;
 }
 
 .wrapper {
     display: grid;
+    width: 100%;
+    grid-template-columns: 1fr,2fr,1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "side main side"
+    "side main side"
+    "side main side";
+    background-color: pink;
     justify-items: center;
     align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-    padding: 2em;
+    place-items: center;
 }
+
+.side {
+   grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
 
 .reroll {
     margin: 2em;
@@ -28,22 +44,23 @@ html {
     width: 1fr;
     margin-top: 1em;
     padding: 2em;
+    background-color: red;
 }
 
-.button-group {
-    display: grid;
-    margin: auto;
-    width: 1fr;
+.reroll {
+    background-color: orange;
+    
 }
 
 .attribute-group {
     width: 2fr;
     margin: auto;
+    background-color: blue;
 }
 
 button {
     height: 4em;
-    width: 6em;
+    width: 8em;
     margin: 1em;
     border-radius: 16px;
     background: #d6d6d6;
