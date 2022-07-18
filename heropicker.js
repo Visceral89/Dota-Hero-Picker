@@ -6,6 +6,7 @@ var heroName = "";
 var heroImg = document.getElementById("heroImg");
 var heroDesc = document.getElementById("heroDesc");
 var heroAttrib = "";
+const heroes = JSON.parse(heroes);
 
 
 // Functions //
