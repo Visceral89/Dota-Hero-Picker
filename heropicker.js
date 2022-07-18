@@ -1,15 +1,10 @@
 /* Here the fun begins. */
 
-// Static Vars // 
-const btnRand = document.getElementById("btnRand");
-var heroName = "";
-var heroImg = document.getElementById("heroImg");
-var heroDesc = document.getElementById("heroDesc");
-var heroAttrib = "";
+
 
 
 //Heroes// Warning HUEG!!!
-heroes = [
+var heroes = [
     {
         "name": "Abaddon",
         "desc": "Able to transform enemy attacks into self-healing, Abaddon can survive almost any assault. Shielding allies and launching his double-edged coil at a friend or foe, he is always ready to ride into the thick of battle.",
@@ -94,20 +89,23 @@ heroes = [
     
 ]
 
+// Static Vars // 
+const btnRand = document.getElementById("btnRand");
+var heroImg = document.getElementById("heroImg");
+var heroName = document.getElementById("");
+var heroRole = document.getElementById("");
+var heroAttribute = document.getElementById("");
+var heroComplex = document.getElementById("");
+var heroDesc = document.getElementById("heroDesc");
+
 // Functions //
 
-
-function selectHeroRandom(){
-
-}
-
-
-function buttonRandom(){
-    selectHeroRandom();
+function buttonRandom(){;
+    var selectedHero = heroes[Math.random() * heroes.length -1];
+    console.log(selectedHero.name);
 }
 
 
 btnRand.addEventListener("click", buttonRandom());
-alert(myheroes[0].heroName);
 
 
