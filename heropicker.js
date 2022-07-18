@@ -92,19 +92,24 @@ var heroes = [
 // Static Vars // 
 const btnRand = document.getElementById("btnRand");
 var heroImg = document.getElementById("heroImg");
-var heroName = document.getElementById("");
-var heroRole = document.getElementById("");
-var heroAttribute = document.getElementById("");
-var heroComplex = document.getElementById("");
+var heroName = document.getElementById("heroName");
+var heroRole = document.getElementById("heroRole");
+var heroAttribute = document.getElementById("heroAttribute");
+var heroComplex = document.getElementById("heroComplex");
 var heroDesc = document.getElementById("heroDesc");
 
 // Functions //
 
 function buttonRandom(){;
-    var selectedHero = heroes[Math.random() * heroes.length -1];
-    console.log(selectedHero.name);
+    var randomNumber = Math.floor(Math.random() * heroes.length -1);
+    var randomHero = heroes[randomNumber];
+    populateText(randomHero);
+    console.log(randomHero);
 }
 
+function populateText(randomHero){
+  //  heroName.innerHTML = randomHero[name]
+};
 
 btnRand.addEventListener("click", buttonRandom());
 
