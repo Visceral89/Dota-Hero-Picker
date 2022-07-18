@@ -1,14 +1,15 @@
-heroes = [
-{
-    "name": "Abaddon",
-    "desc": "This hero is badass",
-    "portrait": "images/abaddon.png",
-    "role": "support"
-},
+[
+    {
+        "name": "Abaddon",
+        "desc": "This hero is badass",
+        "portrait": "images/abaddon.png",
+        "role": "support"
+    },
+    {
+        "name": "Alchemist",
+        "desc": "This hero is the worst",
+        "portrait": "images/alchemist.png",
+        "role": "carry"
+    }
+]
 
-{
-    "name": "Alchemist",
-    "desc": "This hero is the worst",
-    "portrait": "images/alchemist.png",
-    "role": "carry"
-}];
