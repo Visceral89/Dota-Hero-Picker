@@ -94,7 +94,7 @@ const heroRole = document.getElementById("heroRole");
 const heroAttribute = document.getElementById("heroAttribute");
 const heroComplex = document.getElementById("heroComplex");
 const heroDesc = document.getElementById("heroDesc");
-var complexity = randomHero.complexity;
+
 
 
 // Icons //
@@ -111,6 +111,7 @@ function buttonRandom(){;
     var prevRandom = "";
     var randomNumber = Math.floor(Math.random() * heroes.length);
     var randomHero = heroes[randomNumber];
+    
 // rewrite this!!!!!
         if(randomNumber !== prevRandom){
             populateText(randomHero);
@@ -121,12 +122,24 @@ function buttonRandom(){;
         }
 }
 
-function addComplexity(complexity){
-    for(let i = 0; i < complexity; i++){
-        let icon = document.createElement("i");
-        
+
+
+/*function addComplexity(complexity){
+    switch(complexity){
+        case 0:
+            document.getElementById("circle1").style.display = "hidden";
+            document.getElementById("circle2").style.display = "hidden";
+            break;
+        case 1:
+            document.getElementById("circle2").style.display = "hidden";
+            break;
+        default :
+        document.getElementById("circle0").style.display = "block";
+        document.getElementById("circle1").style.display = "block";
+        document.getElementById("circle2").style.display = "block";
     }
-}
+
+} */
 
 function populateText(randomHero){
     console.log(randomHero.name);
