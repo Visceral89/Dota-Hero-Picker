@@ -113,10 +113,11 @@ function buttonRandom(){;
     var randomNumber = Math.floor(Math.random() * heroes.length);
     var randomHero = heroes[randomNumber];
 // rewrite this!!!!!
-    if(randomNumber !== prevRandom){
-        populateText(randomHero);
-        prevRandom = randomNumber;
-    };
+        if(randomNumber !== prevRandom){
+            populateText(randomHero);
+            prevRandom = randomNumber;
+        };
+    console.log("Duplicate Hero!")
 }
 
 function populateText(randomHero){
@@ -134,19 +135,13 @@ function populateText(randomHero){
     console.log(complexity);
     switch(complexity) {
         case 0:
-            circle0.innerHTML = circle;
-            circle1.innerHTML = circleEmpty;
-            circle2.innerHTML = circleEmpty;
+            
             break;
         case 1:
-            circle0.toggleClass(circle);
-            circle1.toggleClass(circle);
-            circle2.toggleClass(circleEmpty);
+            
             break;
         case 2:
-            circle0.className = circle;
-            circle1.className = circle;
-            circle2.className = circle;
+            
             break;
     }
 
