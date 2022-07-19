@@ -10,3 +10,8 @@ html{
     text-align: center;
 }
 
+p{
+    font-weight: bold;
+    margin:2em 5em;
+}
+
