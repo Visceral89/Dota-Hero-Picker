@@ -1,8 +1,5 @@
 /* Here the fun begins. */
 
-
-
-
 //Heroes// Warning HUEG!!!
 var heroes = [
     {
@@ -97,6 +94,8 @@ const heroRole = document.getElementById("heroRole");
 const heroAttribute = document.getElementById("heroAttribute");
 const heroComplex = document.getElementById("heroComplex");
 const heroDesc = document.getElementById("heroDesc");
+var complexity = randomHero.complexity;
+
 
 // Icons //
 var circle0 = document.getElementById("circle0");
@@ -116,37 +115,26 @@ function buttonRandom(){;
         if(randomNumber !== prevRandom){
             populateText(randomHero);
             prevRandom = randomNumber;
-        };
-    console.log("Duplicate Hero!")
+        }
+        else {
+            console.log("Duplicate Hero!");
+        }
+}
+
+function addComplexity(complexity){
+    for(let i = 0; i < complexity; i++){
+        let icon = document.createElement("i");
+        
+    }
 }
 
 function populateText(randomHero){
-
-    // Populate text //
     console.log(randomHero.name);
     heroName.innerHTML = randomHero.name;
     heroDesc.innerHTML = randomHero.desc;
     heroImg.src = randomHero.portrait;
     heroRole.innerHTML = randomHero.role;
     heroAttribute.innerHTML = randomHero.attribute;
-
-    // Difficulty Icons //
-    let complexity = randomHero.complexity;
-    console.log(complexity);
-    switch(complexity) {
-        case 0:
-            
-            break;
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-    }
-
-
-
 };
 
 btnRand.addEventListener("click", buttonRandom);
