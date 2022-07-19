@@ -98,22 +98,62 @@ var heroAttribute = document.getElementById("heroAttribute");
 var heroComplex = document.getElementById("heroComplex");
 var heroDesc = document.getElementById("heroDesc");
 
+// Icons //
+var circle0 = document.getElementById("circle0");
+var circle1 = document.getElementById("circle1");
+var circle2 = document.getElementById("circle2");
+
+const circle = "fa-solid fa-circle";
+const circleEmpty ="fa-solid fa-circle-notch";
+
 // Functions //
 
 function buttonRandom(){;
+    var prevRandom = "";
     var randomNumber = Math.floor(Math.random() * heroes.length);
     var randomHero = heroes[randomNumber];
-    populateText(randomHero);
+// rewrite this!!!!!
+    if(randomNumber !== prevRandom){
+        populateText(randomHero);
+        prevRandom = randomNumber;
+    };
+    randomNumber += randomNumber;
     console.log(randomHero);
 }
 
 function populateText(randomHero){
+
+    // Populate text //
     console.log(randomHero.name);
     heroName.innerHTML = randomHero.name;
     heroDesc.innerHTML = randomHero.desc;
     heroImg.src = randomHero.portrait;
     heroRole.innerHTML = randomHero.role;
     heroAttribute.innerHTML = randomHero.attribute;
+
+    // Difficulty Icons //
+    let complexity = randomHero.complexity;
+    console.log(complexity);
+    switch(complexity) {
+        case 0:
+            circle0.className = circle;
+            circle1.className = circleEmpty;
+            circle2.className = circleEmpty;
+            break;
+        case 1:
+            circle0.className = circle;
+            circle1.className = circle;
+            circle2.className = circleEmpty;
+            break;
+        case 2:
+            circle0.className = circle;
+            circle1.className = circle;
+            circle2.className = circle;
+            break;
+    }
+
+
+
 };
 
 btnRand.addEventListener("click", buttonRandom);
