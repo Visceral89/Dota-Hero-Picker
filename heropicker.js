@@ -1,8 +1,5 @@
 /* Here the fun begins. */
 
-
-
-
 //Heroes// Warning HUEG!!!
 var heroes = [
     {
@@ -98,8 +95,10 @@ const heroAttribute = document.getElementById("heroAttribute");
 const heroComplex = document.getElementById("heroComplex");
 const heroDesc = document.getElementById("heroDesc");
 
+
 // Global Vars
 var prevRandom = 0;
+
 
 // Icons //
 var circle0 = document.getElementById("circle0");
@@ -136,14 +135,18 @@ function buttonRandom(){;
     var prevRandom = "";
     var randomNumber = Math.floor(Math.random() * heroes.length);
     var randomHero = heroes[randomNumber];
+    
 // rewrite this!!!!!
         if(randomNumber !== prevRandom){
             populateText(randomHero);
             prevRandom = randomNumber;
-        };
-    console.log("Duplicate Hero!")
+        }
+        else {
+            console.log("Duplicate Hero!");
+        }
 }
 */
+
 
 function populateText(randomNumber){
 
@@ -174,8 +177,35 @@ function populateText(randomNumber){
 
 
 */
+
+
+
+/*function addComplexity(complexity){
+    switch(complexity){
+        case 0:
+            document.getElementById("circle1").style.display = "hidden";
+            document.getElementById("circle2").style.display = "hidden";
+            break;
+        case 1:
+            document.getElementById("circle2").style.display = "hidden";
+            break;
+        default :
+        document.getElementById("circle0").style.display = "block";
+        document.getElementById("circle1").style.display = "block";
+        document.getElementById("circle2").style.display = "block";
+    }
+
+} */
+
+function populateText(randomHero){
+    console.log(randomHero.name);
+    heroName.innerHTML = randomHero.name;
+    heroDesc.innerHTML = randomHero.desc;
+    heroImg.src = randomHero.portrait;
+    heroRole.innerHTML = randomHero.role;
+    heroAttribute.innerHTML = randomHero.attribute;
 };
 
 btnRand.addEventListener("click", newRandom);
 
-
+}
