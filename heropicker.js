@@ -6,7 +6,7 @@
 //Heroes// Warning HUEG!!!
 var heroes = [
     {
-        name: "Abaddon",
+        "name": "Abaddon",
         "desc": "Able to transform enemy attacks into self-healing, Abaddon can survive almost any assault. Shielding allies and launching his double-edged coil at a friend or foe, he is always ready to ride into the thick of battle.",
         "portrait": "images/abaddon.png",
         "role": "support",
@@ -14,7 +14,7 @@ var heroes = [
         "complexity": "0"
     },
     {
-        name: "Alchemist",
+        "name": "Alchemist",
         "desc": "Synthesizing extra resources from each and every kill, Alchemist has no trouble gathering the tools needed to destroy his foes. Ambushing enemies with corrosive acid and a host of unstable chemicals, he battles to ensure his greedy escapades can remain uninterrupted.",
         "portrait": "images/alchemist.png",
         "role": "carry",
@@ -60,7 +60,7 @@ var heroes = [
         "role": "carry",
         "portrait": "images/bane.png",
         "attribute": "intelligence",
-        "complexity": "1"
+        "complexity": "1" // IDIOT ha inte en switch på en sträng.
     },
     {
         name: "Bat Rider",
@@ -68,7 +68,7 @@ var heroes = [
         "portrait": "images/batrider.png",
         "role": "offlane",
         "attribute": "intelligence",
-        "complexity": "2"
+        "complexity": 2
     },
     {
         name: "Beastmaster",
@@ -76,7 +76,7 @@ var heroes = [
         "portrait": "images/beastmaster.png",
         "role": "offlane",
         "attribute": "strength",
-        "complexity": "1"
+        "complexity": 1
     },
     {
         name: "Bloodseeker",
@@ -98,6 +98,9 @@ const heroAttribute = document.getElementById("heroAttribute");
 const heroComplex = document.getElementById("heroComplex");
 const heroDesc = document.getElementById("heroDesc");
 
+// Global Vars
+var prevRandom = 0;
+
 // Icons //
 var circle0 = document.getElementById("circle0");
 var circle1 = document.getElementById("circle1");
@@ -106,8 +109,29 @@ var circle2 = document.getElementById("circle2");
 const circle = "f111";
 const circleEmpty ="f1ce";
 
+
+
 // Functions //
 
+
+// testing a re write of the random function.
+function newRandom(){
+    var randomNumber = 0;
+    
+    do {
+        randomNumber = Math.floor(Math.random() * heroes.length);
+    } while (prevRandom === randomNumber);
+
+    console.log("Random Number " + randomNumber);
+    console.log("Previous Random " + prevRandom);
+
+    populateText(randomNumber);
+    prevRandom = randomNumber;
+
+
+}
+
+/*
 function buttonRandom(){;
     var prevRandom = "";
     var randomNumber = Math.floor(Math.random() * heroes.length);
@@ -119,18 +143,21 @@ function buttonRandom(){;
         };
     console.log("Duplicate Hero!")
 }
+*/
 
-function populateText(randomHero){
+function populateText(randomNumber){
 
     // Populate text //
-    console.log(randomHero.name);
-    heroName.innerHTML = randomHero.name;
-    heroDesc.innerHTML = randomHero.desc;
-    heroImg.src = randomHero.portrait;
-    heroRole.innerHTML = randomHero.role;
-    heroAttribute.innerHTML = randomHero.attribute;
 
-    // Difficulty Icons //
+    console.log(randomNumber)
+    
+    heroName.innerHTML = heroes[randomNumber].name;
+    heroDesc.innerHTML = heroes[randomNumber].desc;
+    heroImg.src = heroes[randomNumber].portrait;
+    heroRole.innerHTML = heroes[randomNumber].role;
+    heroAttribute.innerHTML = heroes[randomNumber].attribute;
+
+    /*// Difficulty Icons //
     let complexity = randomHero.complexity;
     console.log(complexity);
     switch(complexity) {
@@ -146,9 +173,9 @@ function populateText(randomHero){
     }
 
 
-
+*/
 };
 
-btnRand.addEventListener("click", buttonRandom);
+btnRand.addEventListener("click", newRandom);
 
 
