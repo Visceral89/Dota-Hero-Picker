@@ -130,24 +130,6 @@ function newRandom(){
 
 }
 
-/*
-function buttonRandom(){;
-    var prevRandom = "";
-    var randomNumber = Math.floor(Math.random() * heroes.length);
-    var randomHero = heroes[randomNumber];
-    
-// rewrite this!!!!!
-        if(randomNumber !== prevRandom){
-            populateText(randomHero);
-            prevRandom = randomNumber;
-        }
-        else {
-            console.log("Duplicate Hero!");
-        }
-}
-*/
-
-
 function populateText(randomNumber){
 
     // Populate text //
@@ -160,52 +142,6 @@ function populateText(randomNumber){
     heroRole.innerHTML = heroes[randomNumber].role;
     heroAttribute.innerHTML = heroes[randomNumber].attribute;
 
-    /*// Difficulty Icons //
-    let complexity = randomHero.complexity;
-    console.log(complexity);
-    switch(complexity) {
-        case 0:
-            
-            break;
-        case 1:
-            
-            break;
-        case 2:
-            
-            break;
-    }
-
-
-*/
-
-
-
-/*function addComplexity(complexity){
-    switch(complexity){
-        case 0:
-            document.getElementById("circle1").style.display = "hidden";
-            document.getElementById("circle2").style.display = "hidden";
-            break;
-        case 1:
-            document.getElementById("circle2").style.display = "hidden";
-            break;
-        default :
-        document.getElementById("circle0").style.display = "block";
-        document.getElementById("circle1").style.display = "block";
-        document.getElementById("circle2").style.display = "block";
-    }
-
-} */
-
-function populateText(randomHero){
-    console.log(randomHero.name);
-    heroName.innerHTML = randomHero.name;
-    heroDesc.innerHTML = randomHero.desc;
-    heroImg.src = randomHero.portrait;
-    heroRole.innerHTML = randomHero.role;
-    heroAttribute.innerHTML = randomHero.attribute;
 };
 
 btnRand.addEventListener("click", newRandom);
-
-}
