@@ -112,8 +112,9 @@ const circleEmpty ="f1ce";
 
 // Functions //
 
+// Filter the array for roles.
 
-// testing a re write of the random function.
+// Main Function of the app, fires when you press the random button.
 function newRandom(){
     var randomNumber = 0;
     

@@ -7,6 +7,7 @@
     <title>Dota Hero Picker</title>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
     <script src="https://kit.fontawesome.com/9d3c6258e3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,10 +22,22 @@
             <p id="heroAttribute">Attribute</p>
             <img id="heroImg" src="" alt="">
             <p id="heroDesc">Hero Description</p>
-                <div class="difficulty">
-                    <div id="cicrle0"><i class="fa-solid fa-circle"></i></div>
-                    <div id="cicrle1"><i class="fa-solid fa-circle"></i></div>
-                    <div id="cicrle2"><i class="fa-solid fa-circle"></i></div>
+                <div class="roles">
+                    <button class="role" id="carry">
+                        <span class="icon" id="carry"></span>
+                        Safe Lane</button>
+                    <button class="role" id="mid">
+                        <span class="icon" id="mid"></span>
+                        Mid Lane</button>
+                    <button class="role" id="offlane">
+                        <span class="icon" id="offlane"></span>
+                        Off Lane</button>
+                    <button class="role" id="support">
+                        <span class="icon" id="support"></span>
+                        Soft Support</button>
+                    <button class="role" id="hardsupport">
+                        <span class="icon" id="hardsupport"></span>
+                        Hard Support</button>
                 </div>
         </div>
         <div class="buttons">
