@@ -1,7 +1,35 @@
+.role-button{
+    padding: 1em;
+    margin: auto;
+}
+
 .icon{
-    background: url('/icons/');
+    /*background: url('/icons/'); */
     height: 1.5em;
     width: 1.5em;
     display: block;
-    margin-bottom: 0.5em;
+    size: 90%;
+    background-position: 0;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.icon.carry{
+    background: url("/icons/SVG/core.svg");
+}
+
+.icon.mid{
+    background: url("/icons/SVG/mid.svg");
+}
+
+.icon.offlane{
+    background: url("/icons/SVG/offlane.svg");
+}
+
+.icon.support{
+    background: url("/icons/SVG/softsupp.svg");
+}
+
+.icon.hardsupport{
+    background: url("/icons/SVG/hardsupp.svg");
 }

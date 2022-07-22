@@ -101,7 +101,7 @@ var prevRandom = 0;
 
 
 // Icons //
-var circle0 = document.getElementById("circle0");
+var btnCarry = document.getElementById("circle0");
 var circle1 = document.getElementById("circle1");
 var circle2 = document.getElementById("circle2");
 
