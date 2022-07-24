@@ -113,13 +113,19 @@ const circleEmpty ="f1ce";
 // Functions //
 
 // Filter the array for roles.
+function roleFilter(selectedRole){
+    let filterHeroes = heroes.filter(selectedRole);
+    return filterHeroes
+}
 
 // Main Function of the app, fires when you press the random button.
+
+
+
 function newRandom(){
     var randomNumber = 0;
-    
     do {
-        randomNumber = Math.floor(Math.random() * heroes.length);
+        randomNumber = Math.floor(Math.random() * filterHeroes(selectedRole).length);
     } while (prevRandom === randomNumber);
 
     console.log("Random Number " + randomNumber);
@@ -127,8 +133,6 @@ function newRandom(){
 
     populateText(randomNumber);
     prevRandom = randomNumber;
-
-
 }
 
 function populateText(randomNumber){
@@ -137,7 +141,7 @@ function populateText(randomNumber){
 
     console.log(randomNumber)
     
-    heroName.innerHTML = heroes[randomNumber].name;
+    heroName.innerHTML = filterHeroes[randomNumber].name;
     heroDesc.innerHTML = heroes[randomNumber].desc;
     heroImg.src = heroes[randomNumber].portrait;
     heroRole.innerHTML = heroes[randomNumber].role;
