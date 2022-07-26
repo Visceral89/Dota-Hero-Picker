@@ -86,7 +86,12 @@ var heroes = [
     
 ]
 
-// Static Vars // 
+// Static Vars //
+const carryBtn = document.getElementById("carry")
+const midBtn = document.getElementById("mid")
+const offlaneBtn = document.getElementById("offlane")
+const supportBtn = document.getElementById("support")
+const hardsupportBtn = document.getElementById("hardsupport")
 const btnRand = document.getElementById("btnRand");
 const heroImg = document.getElementById("heroImg");
 const heroName = document.getElementById("heroName");
@@ -115,7 +120,7 @@ const circleEmpty ="f1ce";
 // Filter the array for roles.
 function roleFilter(selectedRole){
     let filterHeroes = heroes.filter(selectedRole);
-    return filterHeroes
+    return filterHeroes;
 }
 
 // Main Function of the app, fires when you press the random button.
